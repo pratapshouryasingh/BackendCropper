@@ -1,12 +1,36 @@
 services:
   - type: web
-    name: shippingcropper-backend
+    name: BackendCropper
     env: node
     plan: free
     buildCommand: "npm install && pip install -r tools/MeshooCropper/requirements.txt"
     startCommand: "npm start"
     envVars:
       - key: NODE_VERSION
-        value: 20
+        value: 22
+      - key: PYTHON_VERSION
+        value: 3.11
+
+  - type: web
+    name: FlipkartCropper
+    env: node
+    plan: free
+    buildCommand: "npm install && pip install -r tools/FlipkartCropper/requirements.txt"
+    startCommand: "npm start"
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: PYTHON_VERSION
+        value: 3.11
+
+  - type: web
+    name: JioMartCropper
+    env: node
+    plan: free
+    buildCommand: "npm install && pip install -r tools/JioMartCropper/requirements.txt"
+    startCommand: "npm start"
+    envVars:
+      - key: NODE_VERSION
+        value: 22
       - key: PYTHON_VERSION
         value: 3.11

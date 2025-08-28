@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: shippingcropper-backend
+    env: node
+    plan: free
+    buildCommand: "npm install && pip install -r tools/MeshooCropper/requirements.txt"
+    startCommand: "npm start"
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: PYTHON_VERSION
+        value: 3.11

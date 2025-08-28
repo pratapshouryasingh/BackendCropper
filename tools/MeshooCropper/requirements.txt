@@ -1,0 +1,9 @@
+requests
+pandas
+tqdm
+PyMuPDF
+pdfminer.six
+pretty-html-table
+weasyprint
+pdfkit
+XlsxWriter
